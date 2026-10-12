@@ -65,7 +65,8 @@ test("CRM terms keep the free pilot, support and liability boundaries", () => {
     "Either side can end the pilot at any time.",
     "To the fullest extent permitted by applicable law",
     "Nothing in these terms excludes liability that cannot lawfully be excluded",
-    "at least 30 days before they apply",
+    "Changes apply when they are published, and TrickTic tells you by email about changes that matter to you.",
+    "it tells you at least 30 days before. Nothing is charged without a separate written agreement.",
     "governed by the laws of the State of Israel",
     "mandatory laws of the country where you live",
   ]) assert.ok(visible.includes(clause), clause);

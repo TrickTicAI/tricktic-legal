@@ -11,7 +11,7 @@ All notable changes to what legal.tricktic.com serves. The format follows
 - Live on legal.tricktic.com since 2026-10-05. The repository moved to the
   TrickTicAI organization, which has verified tricktic.com for GitHub Pages.
 
-## [1.5.0] - draft, not published
+## [1.5.0] - 2026-10-12
 
 ### Changed
 
@@ -26,8 +26,10 @@ All notable changes to what legal.tricktic.com serves. The format follows
 - The same pages now match what CRM already does: notice emails carry the
   lead's details, and follow-ups can reach the owner's calendar through a
   private subscription link or a Google Calendar connection.
-- Draft: the text and its effective date wait for Daniel's approval, and the
-  date is set when it is published.
+- Changes to the terms apply when they are published, with an email about
+  changes that matter to the client, instead of 30 days' notice. The 30 days'
+  notice before any pricing stays.
+- Approved by Daniel on 2026-10-12, effective the same day.
 
 ## [1.4.0] - 2026-10-09
 

@@ -8,7 +8,7 @@ import type { AppDocument } from "./types";
 // and governing-law clauses. Support stays support@tricktic.com, the CRM's
 // chosen contact; CRM has no store listing.
 //
-// DRAFT for the messaging stage (TrickTic-CRM card CRM-79, plan
+// Messaging stage (TrickTic-CRM card CRM-79, plan
 // docs/plans/messaging-workspace.md, decisions D-4, D-7, D-8, D-10, D-14 and
 // D-16): Instagram and WhatsApp conversations in both directions, sending on
 // the owner's instruction, stored files, WhatsApp history, marking a chat as
@@ -16,8 +16,10 @@ import type { AppDocument } from "./types";
 // the channels cannot be described by role. The draft also brings three
 // statements in line with what CRM already does: notice emails carry the lead's
 // details (CRM-46), and follow-ups can reach the owner's calendar through a
-// subscription link (CRM-60) or Google Calendar (CRM-69). Not approved and not
-// published until Daniel says so; the effective date is set at publication.
+// subscription link (CRM-60) or Google Calendar (CRM-69). Daniel approved the
+// text on 2026-10-12, left the AI tools sentence unchanged and replaced the
+// 30 days' notice of changes to the terms: changes apply when published. The
+// 30 days' notice before any pricing stays.
 export const trickticCrmPrivacyPolicy: AppDocument = {
   slug: "tricktic-crm",
   appName: "TrickTic-CRM",
@@ -186,7 +188,7 @@ export const trickticCrmTermsOfUse: AppDocument = {
       { type: "paragraph", text: "Nothing in these terms excludes liability that cannot lawfully be excluded, such as liability for fraud, intentional harm or gross negligence, or for death or personal injury caused by negligence, or takes away mandatory consumer rights or remedies." },
     ] },
     { heading: "Changes", blocks: [
-      { type: "paragraph", text: "TrickTic tells you about changes to these terms at least 30 days before they apply." },
+      { type: "paragraph", text: "TrickTic may update these terms. The current version and its effective date are always on this page. Changes apply when they are published, and TrickTic tells you by email about changes that matter to you." },
     ] },
     { heading: "Governing law, contact and disputes", blocks: [
       { type: "paragraph", text: "These terms are governed by the laws of the State of Israel. If you use the service as a consumer, this does not take away the protection of mandatory laws of the country where you live, and you may bring a claim in any court available to you under those laws." },
