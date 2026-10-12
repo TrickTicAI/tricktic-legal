@@ -11,6 +11,24 @@ All notable changes to what legal.tricktic.com serves. The format follows
 - Live on legal.tricktic.com since 2026-10-05. The repository moved to the
   TrickTicAI organization, which has verified tricktic.com for GitHub Pages.
 
+## [1.5.0] - draft, not published
+
+### Changed
+
+- TrickTic-CRM privacy policy and pilot terms cover the messaging stage
+  (TrickTic-CRM card CRM-79): Instagram and WhatsApp conversations in both
+  directions, sending only when the owner writes and presses send, stored
+  pictures, voice messages, video and files in outside storage, earlier
+  WhatsApp chats, marking a conversation as personal, and deletion including
+  Meta's data deletion request. Meta is named; other providers stay described
+  by role. A section tells people who wrote to a business how to ask for their
+  details or their deletion.
+- The same pages now match what CRM already does: notice emails carry the
+  lead's details, and follow-ups can reach the owner's calendar through a
+  private subscription link or a Google Calendar connection.
+- Draft: the text and its effective date wait for Daniel's approval, and the
+  date is set when it is published.
+
 ## [1.4.0] - 2026-10-09
 
 ### Added
