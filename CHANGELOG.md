@@ -11,6 +11,30 @@ All notable changes to what legal.tricktic.com serves. The format follows
 - Live on legal.tricktic.com since 2026-10-05. The repository moved to the
   TrickTicAI organization, which has verified tricktic.com for GitHub Pages.
 
+## [1.6.0] - draft, not published
+
+### Changed
+
+- TrickTic-CRM privacy policy and pilot terms cover the business package
+  (TrickTic-CRM card CRM-112), whose parts TrickTic switches on per business:
+  the assistant's suggested replies and its replies inside the free reply
+  time, with what is sent to an AI model provider and what is not; calls
+  answered by a voice assistant, with the provider's recordings and
+  transcripts kept for no more than 30 days and no audio in CRM; contracts and
+  quotes sent by email and signed or answered online, with the signing record
+  and PDF; payment records that are not invoices; and the booking page. Both
+  new providers are described by role.
+- "CRM's features do not use AI" and "AI features" in the list of what is not
+  included are replaced. Today's order stays a fixed rule without AI.
+- The pages now match what CRM already does: booking confirmations are
+  emailed to the customer who booked, so "does not send anything
+  automatically" is replaced by the list of what CRM sends.
+- The terms add the owner's responsibilities for the assistant's answers,
+  call-recording duties, contract content and electronic signatures, and
+  payment records, and the matching limits of liability.
+- Draft: the text and its effective date wait for Daniel's approval, and the
+  date is set when it is published.
+
 ## [1.5.0] - 2026-10-12
 
 ### Changed
