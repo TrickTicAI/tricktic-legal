@@ -11,7 +11,7 @@ All notable changes to what legal.tricktic.com serves. The format follows
 - Live on legal.tricktic.com since 2026-10-05. The repository moved to the
   TrickTicAI organization, which has verified tricktic.com for GitHub Pages.
 
-## [1.6.0] - draft, not published
+## [1.6.0] - 2026-10-17
 
 ### Changed
 
@@ -32,8 +32,8 @@ All notable changes to what legal.tricktic.com serves. The format follows
 - The terms add the owner's responsibilities for the assistant's answers,
   call-recording duties, contract content and electronic signatures, and
   payment records, and the matching limits of liability.
-- Draft: the text and its effective date wait for Daniel's approval, and the
-  date is set when it is published.
+- Approved by Daniel on 2026-10-17 and published the same day, effective
+  2026-10-17. The voice statements are kept by TrickTic-CRM card CRM-133.
 
 ## [1.5.0] - 2026-10-12
 

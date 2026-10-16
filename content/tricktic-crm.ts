@@ -33,7 +33,9 @@ import type { AppDocument } from "./types";
 // anything automatically" untrue. The AI model provider and the voice-agent
 // provider are described by role, like the other providers. The text says
 // nothing beyond what is built or carded; the table of statements not yet
-// built is in the CRM repository, docs/ops/privacy.md.
+// built is in the CRM repository, docs/ops/privacy.md. Daniel approved the
+// text on 2026-10-17 and asked for it to be published that day; the voice
+// statements are kept by card CRM-133.
 export const trickticCrmPrivacyPolicy: AppDocument = {
   slug: "tricktic-crm",
   appName: "TrickTic-CRM",
