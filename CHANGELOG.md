@@ -11,6 +11,20 @@ All notable changes to what legal.tricktic.com serves. The format follows
 - Live on legal.tricktic.com since 2026-10-05. The repository moved to the
   TrickTicAI organization, which has verified tricktic.com for GitHub Pages.
 
+## [1.7.0] - 2026-10-27
+
+### Changed
+
+- TrickTic-CRM privacy policy covers error monitoring (TrickTic-CRM card
+  CRM-214): technical error reports from the CRM app, the phone app and the
+  servers go to an error monitoring provider, described by role, after CRM
+  removes customer content and without storing IP addresses; its data is kept
+  in the European Union for 30 days. Owners' problem reports (a note and an
+  optional screenshot) are stored in CRM, exported and deleted with the
+  account, and are not sent to that provider.
+- Effective 2026-10-27, with Daniel's go of the same day. The terms are
+  unchanged.
+
 ## [1.6.0] - 2026-10-17
 
 ### Changed
