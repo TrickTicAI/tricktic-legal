@@ -51,12 +51,22 @@ test("CRM privacy keeps its provider, retention and deletion clauses", () => {
     "A record that a deletion happened is kept indefinitely",
     "You may request an export through support for 30 days",
     "no later than 72 hours after becoming aware",
+    // Error monitoring and problem reports (CRM-214).
+    "Collects technical reports of errors in the CRM app, the phone app and the CRM servers",
+    "the screen as a pattern rather than its address",
+    "Before a report leaves the CRM server, names, phone numbers, email addresses, messages, form answers, files, the links' secret codes and any Hebrew or other non-Latin text are removed, and IP addresses are not stored.",
+    "Your problem report notes and screenshots are not sent to it.",
+    "Its data is kept in the European Union",
+    "At the error monitoring provider: 30 days",
+    "Neither includes your note or screenshot, which stay in CRM.",
+    "the problem reports you sent",
   ]) assert.ok(visible.includes(clause), clause);
   assert.ok(links(html).some((link) => link.href === "mailto:support@tricktic.com"));
   // Providers other than Google and Meta are described by role (owner,
   // 2026-10-07; Meta is the channel itself and cannot be described by role).
   // The AI model and voice-agent providers are described by role too (CRM-112).
-  for (const name of ["HOSTKEY", "Cloudflare", "SMTP2GO", "n8n", "R2", "Amazon", "OpenAI", "Anthropic", "Claude", "Codex", "ChatGPT", "ElevenLabs", "Vapi", "Retell", "Voicy", "Yappr"]) {
+  // So is the error monitoring provider (CRM-214).
+  for (const name of ["HOSTKEY", "Cloudflare", "SMTP2GO", "n8n", "R2", "Amazon", "OpenAI", "Anthropic", "Claude", "Codex", "ChatGPT", "ElevenLabs", "Vapi", "Retell", "Voicy", "Yappr", "Sentry", "GlitchTip"]) {
     assert.ok(!visible.includes(name), `names a provider: ${name}`);
   }
 });

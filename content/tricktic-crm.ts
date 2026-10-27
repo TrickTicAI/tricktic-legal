@@ -36,14 +36,21 @@ import type { AppDocument } from "./types";
 // built is in the CRM repository, docs/ops/privacy.md. Daniel approved the
 // text on 2026-10-17 and asked for it to be published that day; the voice
 // statements are kept by card CRM-133.
+//
+// Error monitoring (TrickTic-CRM card CRM-214, decision D-54, design
+// docs/ops/error-monitoring.md): technical error reports from the web app, the
+// phone app and the servers go to an error monitoring provider, described by
+// role like the others, after CRM removes customer content from them; and the
+// owner's "report a problem" note and screenshot, kept in CRM. Daniel gave the
+// go for this update on 2026-10-27.
 export const trickticCrmPrivacyPolicy: AppDocument = {
   slug: "tricktic-crm",
   appName: "TrickTic-CRM",
   title: "TrickTic-CRM Privacy Policy",
-  lastUpdated: "Effective: October 17, 2026",
+  lastUpdated: "Effective: October 27, 2026",
   description: "What TrickTic-CRM stores, including conversations, the assistant, calls, contracts, payment records and bookings, who processes it, how long it is kept and how to export or delete it.",
   intro: [
-    { type: "linked-paragraph", parts: ["Effective 2026-10-17. Provider: TrickTic, operated by Daniel Shedrinsky. Questions or requests: ", { text: "support@tricktic.com", href: "mailto:support@tricktic.com" }, "."] },
+    { type: "linked-paragraph", parts: ["Effective 2026-10-27. Provider: TrickTic, operated by Daniel Shedrinsky. Questions or requests: ", { text: "support@tricktic.com", href: "mailto:support@tricktic.com" }, "."] },
     { type: "paragraph", text: "This policy covers TrickTic-CRM at crm.tricktic.com, a workspace for the leads and conversations that businesses receive from their landing pages, Instagram, WhatsApp, phone calls and booking page. Access is by invitation." },
     { type: "paragraph", text: "Some parts of CRM are switched on by TrickTic for each business separately: the assistant, the voice assistant, contracts and quotes, payment records and the booking page. A part that is off for your business collects nothing for it." },
   ],
@@ -73,6 +80,7 @@ export const trickticCrmPrivacyPolicy: AppDocument = {
         ["Bookings on your booking page: the service, the time, the customer's name and phone, and their email and note if they give them", "Your customer, on your booking page"],
         ["Your business details for documents: logo, legal and trade name, business type and number, address and contact details", "You or TrickTic, when setting up your business"],
         ["Your work on leads: stages, notes, follow-ups, contact confirmations, outcomes and amounts you declare", "You"],
+        ["Problem reports you send from Help or More: your note, a screenshot if you add one, the screen you sent it from, the app version and a reference to the last error report", "You"],
         ["Your login: the email address and account identifier Google returns", "Google sign-in"],
         ["History and audit records of changes, exports and deletions", "CRM"],
       ] },
@@ -80,6 +88,7 @@ export const trickticCrmPrivacyPolicy: AppDocument = {
       { type: "paragraph", text: "CRM sends a message to a customer only in these cases: when you write it and press send, one message to one person; when you press send on a contract or quote, one email to one person, and after they answer it, a copy of the signed contract or answered quote to them; when the assistant is on for that channel, as described below; and the confirmation and change emails of a booking, sent to the customer who booked if they gave an email address. It does not send in bulk or on a schedule, and it does not send paid template messages." },
       { type: "paragraph", text: "The assistant is an AI feature that TrickTic switches on for a business. It can suggest a reply that you edit and send yourself. If TrickTic also switches on its replies for an Instagram or WhatsApp account, it answers a customer who writes to you, only while the channel's free reply time is open, and passes the conversation to you when it cannot answer. It answers only from your knowledge card and the current conversation. It does not see files, notes, payments, contracts, other clients or other businesses, and it does not write first, book, change records or send anything other than its reply. It stops in a conversation you answer yourself, pause or mark as personal." },
       { type: "paragraph", text: "CRM does not use AI to sort or score your leads. The order of the Today list is a fixed rule." },
+      { type: "paragraph", text: "When you send a problem report, TrickTic gets an email saying that a report arrived and, if your business has a WhatsApp group with TrickTic, a message there naming the screen. Neither includes your note or screenshot, which stay in CRM." },
       { type: "paragraph", text: "A connected Instagram or WhatsApp account brings every chat on it into CRM, including private chats with friends, family or suppliers. You can mark a conversation as personal. CRM then deletes its stored messages and files and stops keeping later messages from that person, until you undo it." },
     ] },
     { heading: "Who else processes data", blocks: [
@@ -92,6 +101,7 @@ export const trickticCrmPrivacyPolicy: AppDocument = {
         ["A voice-agent provider, chosen by TrickTic", "Answers the calls your business forwards to it, with a voice assistant that uses speech and AI models, and sends CRM the result", "The calls: the caller's number and voice, and what is said. It records and transcribes each call and sends CRM the number, the transcript, a summary and the details collected. TrickTic sets it to keep recordings and transcripts for no more than 30 days"],
         ["A file storage provider", "Stores the pictures, voice messages, video and files of your conversations, and the PDFs of signed contracts and answered quotes", "Those files, encrypted by CRM before they are stored. They are never public and are shown only to you, signed in to CRM"],
         ["An email delivery provider", "Sends your new-lead and follow-up emails, the contracts and quotes you send, their PDFs once answered, and booking emails", "Your email address and the notice. So that you can act from the email, a notice includes the lead's name, phone, email, source and message. For contracts, quotes and bookings: the customer's email address, the link and, once answered, the PDF, sent to the customer and to you. Open and click tracking are off"],
+        ["An error monitoring provider, chosen by TrickTic", "Collects technical reports of errors in the CRM app, the phone app and the CRM servers, so that TrickTic can find and fix them", "For each error: its type and a cleaned message, where in CRM's code it happened, the CRM version, the screen as a pattern rather than its address, the browser, operating system and device model, and an opaque identifier of your business. Before a report leaves the CRM server, names, phone numbers, email addresses, messages, form answers, files, the links' secret codes and any Hebrew or other non-Latin text are removed, and IP addresses are not stored. Your problem report notes and screenshots are not sent to it. Its data is kept in the European Union"],
         ["The calendar app you add CRM's private subscription link to", "Shows your open follow-ups in your own calendar", "For each follow-up, the kind of step and the client's name, the date or time and the meeting place. Anyone who has the link can read these, so keep it private. You can replace it or turn it off"],
         ["Encrypted backups on a separate TrickTic-operated server", "Recovery", "Database copies, encrypted before they leave the CRM server"],
         ["Integration services used to deliver submissions", "Pass form submissions from your landing page to CRM", "The form submission"],
@@ -114,6 +124,8 @@ export const trickticCrmPrivacyPolicy: AppDocument = {
         ["The knowledge card, and the record of each use of the assistant", "The card until you change it or your account is deleted; the records of use with the lead they concern. The text sent to the AI model provider is not kept in CRM"],
         ["Calls answered by the voice assistant", "In CRM: with the lead they belong to. At the voice-agent provider: recordings and transcripts for no more than 30 days"],
         ["Contracts, quotes, signing records and their PDFs", "With the lead they belong to. A signing or approval link works for 30 days, or until the end of the quote's validity, unless you withdraw it earlier"],
+        ["Problem reports", "Until your account is deleted"],
+        ["Error reports", "At the error monitoring provider: 30 days"],
         ["Payment records and bookings", "With the lead they belong to. Your payment details until you change them or your account is deleted"],
         ["After you delete a lead or your account", "Removed from the live database immediately, together with the stored files and PDFs"],
         ["Encrypted backups", "All copies for 48 hours, one a day for 14 days, one a week for 8 weeks. A deleted lead can stay inside older backups for up to about 8 weeks"],
@@ -126,7 +138,7 @@ export const trickticCrmPrivacyPolicy: AppDocument = {
     { heading: "Exports and deletion", blocks: [
       { type: "paragraph", text: "In the app's privacy screen you can:" },
       { type: "list", items: [
-        "download all your data (JSON), including conversations and their files, the assistant's replies and knowledge card, calls, contracts, quotes and their PDFs, payment records and bookings, and your lead list (CSV),",
+        "download all your data (JSON), including conversations and their files, the assistant's replies and knowledge card, calls, contracts, quotes and their PDFs, payment records, bookings and the problem reports you sent, and your lead list (CSV),",
         "delete one lead (including leads merged into it, their conversations, files, calls, contracts, quotes and their PDFs, payment records and bookings),",
         "delete your whole account.",
       ] },
