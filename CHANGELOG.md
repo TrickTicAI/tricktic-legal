@@ -11,6 +11,23 @@ All notable changes to what legal.tricktic.com serves. The format follows
 - Live on legal.tricktic.com since 2026-10-05. The repository moved to the
   TrickTicAI organization, which has verified tricktic.com for GitHub Pages.
 
+## [1.6.1] - 2026-10-30
+
+### Changed
+
+- TrickTic Studio privacy policy and terms cover the Studio Android app
+  (TrickTic Studio card TTS-250), for its Google Play listing. They add Google
+  account-sheet sign-in, the session's phone name and the push-notification
+  token with when it is removed, and the token kept in the phone's secure
+  storage. They also add the app's exclusion from Android backup, filming or
+  picking clips without app permissions, sharing through the share sheet, and
+  the fixed-wording notifications. The app has no analytics or crash
+  reporting. Google's push-notification service is listed as a provider, and
+  account deletion works in the app.
+- The Studio sign-in identity clause now describes the account avatar
+  (TTS-50) with the wording of PR #7, replacing "We do not keep your Google
+  profile picture".
+
 ## [1.6.0] - 2026-10-17
 
 ### Changed

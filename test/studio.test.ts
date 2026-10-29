@@ -9,7 +9,9 @@ test("Studio privacy keeps its provider, retention and deletion clauses", () => 
   for (const clause of [
     "Published and operated by TrickTic (Daniel Shedrinsky)",
     "invitation-only hosted TrickTic Studio service at studio.tricktic.com",
-    "We do not keep your Google profile picture or Google access tokens.",
+    "We also store the latest accepted profile photo URL and your optional preset icon choice.",
+    "your browser loads it directly from the sign-in provider's image service without sending a referrer",
+    "We do not accept photo uploads or keep provider access tokens.",
     "It does not use advertising or cross-site tracking cookies.",
     "Providers may change as the service develops",
     "We configure these providers not to use your content to train their models.",
@@ -32,6 +34,27 @@ test("Studio privacy keeps its provider, retention and deletion clauses", () => 
   }
 });
 
+test("Studio privacy covers the Android app as built (TTS-250)", () => {
+  const visible = mainText(readBuilt("tricktic-studio/privacy.html"));
+  for (const clause of [
+    "and the TrickTic Studio Android app, which opens the same service",
+    "records your phone's name or model",
+    "we store the phone's push-notification token, linked to that phone's session",
+    "Notifications are off until you allow them.",
+    "kept in the phone's secure storage, for that phone only",
+    "The app is excluded from Android cloud backup and device-to-device transfer.",
+    "Uninstalling the app removes what it kept on the phone; it does not delete your Studio account.",
+    "The app contains no analytics, advertising or crash-reporting component.",
+    "Only the files you pick or record are uploaded",
+    "The app does not ask for camera, microphone, storage, contacts or location permissions.",
+    "It contains no project title, name, transcript, video or account detail.",
+    "Google's push-notification service (Firebase Cloud Messaging) delivers notifications to the Android app.",
+    "A phone's push-notification token is removed when you sign out of the app",
+    "Notifications not delivered within a day are cancelled, and their records are deleted after 7 days.",
+    "on the web or in the Android app, by typing DELETE ACCOUNT",
+  ]) assert.ok(visible.includes(clause), clause);
+});
+
 test("Studio terms keep the free pilot, content rights and liability boundaries", () => {
   const html = readBuilt("tricktic-studio/terms.html");
   const visible = mainText(html);
@@ -50,6 +73,9 @@ test("Studio terms keep the free pilot, content rights and liability boundaries"
     "Nothing in these terms excludes liability that cannot lawfully be excluded",
     "governed by the laws of the State of Israel",
     "mandatory laws of the country where you live",
+    "and the TrickTic Studio Android app, operated by TrickTic",
+    "Google Play's own terms apply to downloading the app from Google Play.",
+    "Uninstalling the app does not delete your account.",
   ]) assert.ok(visible.includes(clause), clause);
   assert.ok(links(html).some((link) => link.href === "https://legal.tricktic.com/tricktic-studio/privacy"));
 });
