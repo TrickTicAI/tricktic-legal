@@ -6,23 +6,26 @@ import type { AppDocument } from "./types";
 // at the owner's request (2026-10-07), so infrastructure can change under them.
 // Wording approved by Daniel on 2026-10-07. Pilot email, per-person pilot dates
 // and the operator's overview added at Daniel's request on 2026-10-08 (Studio TTS-47).
+// The Android app (Studio TTS-250) and the account avatar (TTS-50, the wording of
+// tricktic-legal PR #7) added at Daniel's request on 2026-10-30, for the Play listing.
 export const trickticStudioPrivacyPolicy: AppDocument = {
   slug: "tricktic-studio",
   appName: "TrickTic Studio",
   title: "TrickTic Studio Privacy Policy",
-  lastUpdated: "Effective: October 8, 2026",
-  description: "Privacy policy for the invitation-only hosted TrickTic Studio service.",
+  lastUpdated: "Effective: October 30, 2026",
+  description: "Privacy policy for the invitation-only hosted TrickTic Studio service and its Android app.",
   intro: [
-    { type: "linked-paragraph", parts: ["Effective 2026-10-08. Published and operated by TrickTic (Daniel Shedrinsky). For privacy questions, contact ", { text: "contact@tricktic.com", href: "mailto:contact@tricktic.com" }, "."] },
-    { type: "paragraph", text: "This policy covers the invitation-only hosted TrickTic Studio service at studio.tricktic.com. Studio turns pre-cut spoken clips into finished downloadable videos." },
+    { type: "linked-paragraph", parts: ["Effective 2026-10-30. Published and operated by TrickTic (Daniel Shedrinsky). For privacy questions, contact ", { text: "contact@tricktic.com", href: "mailto:contact@tricktic.com" }, "."] },
+    { type: "paragraph", text: "This policy covers the invitation-only hosted TrickTic Studio service at studio.tricktic.com and the TrickTic Studio Android app, which opens the same service. Studio turns pre-cut spoken clips into finished downloadable videos." },
   ],
   sections: [
     { heading: "Information we process and why", blocks: [
       { type: "list", items: [
-        "Your Google sign-in identity: the verified email address and the name Google provides, matched against your invitation, let us identify your account and control access. We do not keep your Google profile picture or Google access tokens.",
+        "Your sign-in identity: the verified email address and display name supplied by your sign-in provider, matched against your invitation, let us identify your account and control access. We also store the latest accepted profile photo URL and your optional preset icon choice. If you use the photo, your browser loads it directly from the sign-in provider's image service without sending a referrer; that service receives your network address. Choosing a preset uses bundled artwork instead. Your avatar fields are included in your account export and cleared when you delete your account. We do not accept photo uploads or keep provider access tokens.",
         "Your content: projects, clips, voice recordings, still images, scripts, topics, hooks, transcripts, captions, Copilot discussion, library assets such as music, fonts and branding, their rights receipts, templates, renders and exports. We store and process it to provide the features you use. Uploaded files are kept as you provide them, including filenames and any embedded metadata.",
         "AI and usage records: for each AI request, the input it was given, the prompt version, the model and the usage it consumed, plus spending counters that enforce usage caps. Job progress and a project activity feed show you what happened.",
-        "Sign-in sessions: a random session identifier, of which the server stores only a one-way hash, a coarse browser and platform label and the time it was last used.",
+        "Sign-in sessions: a random session identifier, of which the server stores only a one-way hash, a coarse browser and platform label and the time it was last used. A session started in the Android app is also marked as the app and records your phone's name or model, such as \"Pixel 7\".",
+        "The Android app's notifications: if you allow notifications in the app, we store the phone's push-notification token, linked to that phone's session, with the phone's name and the kinds of notification you have turned on. Notifications are off until you allow them.",
         "Technical information: network addresses, browser and device details, error details and timings, used to deliver the service, limit abuse and diagnose and fix problems. We keep it only as long as needed for those purposes and do not intentionally include your media, transcripts, scripts or discussion in logs or error reports.",
         "Feedback you send through Help & feedback: its category, your text and, if you choose, the app version, browser and a project identifier.",
         "Your invitation and pilot: the email address you were invited at, when you were invited and the free days offered, the start and end of your free pilot, any extension, and the support time the operator records for your account.",
@@ -32,12 +35,22 @@ export const trickticStudioPrivacyPolicy: AppDocument = {
     { heading: "Cookies and browser storage", blocks: [
       { type: "paragraph", text: "Studio uses essential cookies to sign you in and keep you signed in. It does not use advertising or cross-site tracking cookies." },
       { type: "paragraph", text: "Studio keeps a few things in your browser, for your account only: device settings, unsaved edits to projects and scripts for up to 14 days, the list of recent exports and the details of paused uploads. It does not keep download or upload links, credentials, file contents or AI answers there. Signing out or deleting your account clears it. Browser notifications are off until you allow them; when on, they show project titles." },
+      { type: "paragraph", text: "In the Android app, the same sign-in cookie is kept in the app's own browser view, and the phone's push-notification token is kept in the phone's secure storage, for that phone only. The app is excluded from Android cloud backup and device-to-device transfer. Signing out of the app removes the token from the phone and from Studio. Uninstalling the app removes what it kept on the phone; it does not delete your Studio account. The app contains no analytics, advertising or crash-reporting component." },
+    ] },
+    { heading: "The Android app", blocks: [
+      { type: "list", items: [
+        "Sign-in uses the Google account sheet on your phone. The app sends Studio the resulting Google sign-in token once, to start an ordinary Studio session, and keeps no Google password or Google access token.",
+        "You can film a clip with your phone's camera app or pick one from your phone's gallery. Only the files you pick or record are uploaded, through the same upload as on the web. The app does not ask for camera, microphone, storage, contacts or location permissions.",
+        "Sharing a finished video uses Android's share sheet: the video goes only to the app you choose.",
+        "A notification says that a render finished or needs attention, that new drafts from your stream are ready, that a stream needs attention, or that a test notification you asked for has arrived. Its text is fixed wording, such as \"Your video is ready\", with a link to the screen it opens. It contains no project title, name, transcript, video or account detail. You can turn each kind off in Settings → Notifications, or turn notifications off in Android's settings.",
+      ] },
     ] },
     { heading: "Service providers", blocks: [
       { type: "paragraph", text: "We use service providers to run Studio. They process information only as needed to provide their service to us:" },
       { type: "list", items: [
         "Hosting, network and storage providers run Studio's servers and database, carry the connection to your browser and store uploaded media, finished videos and encrypted backups.",
         "Google provides sign-in.",
+        "Google's push-notification service (Firebase Cloud Messaging) delivers notifications to the Android app. It receives the phone's push-notification token and the notification described above.",
         "Transcription of your audio and video may run on hardware we operate or with a speech-recognition provider.",
         "AI model providers power Copilot and other AI features. A request sends the project information needed for it, such as the script, transcript or captions, recent discussion and only the library descriptions you choose to share. It does not send your account credentials. We configure these providers not to use your content to train their models.",
         "Error-monitoring and operational services help us detect and fix problems, using the technical information described above.",
@@ -57,13 +70,14 @@ export const trickticStudioPrivacyPolicy: AppDocument = {
         "The project activity feed keeps 30 days. Feedback is deleted after 90 days and is not included in backups. Operator audit records are kept for 90 days.",
         "Records of invitation and reminder emails are kept for 30 days. An invitation that is never used is deleted 30 days after it expires or is revoked. Your invitation, pilot dates and recorded support time are kept until your account is deleted.",
         "Expired sign-in sessions are removed a day after they expire.",
+        "A phone's push-notification token is removed when you sign out of the app, remove the phone in Settings → Notifications, when that phone's sign-in session ends, when Google reports the token is no longer valid, or when you delete your account. Notifications not delivered within a day are cancelled, and their records are deleted after 7 days.",
         "Encrypted backups are made daily and kept for at most 7 days.",
       ] },
       { type: "paragraph", text: "When your free pilot ends, Studio stops taking new uploads, edits, renders and AI requests for your account, and you can still sign in to watch, download and export your data or delete your account. Your content is not silently erased; the terms of service explain the notice we give before closing an account." },
     ] },
     { heading: "Exporting and deleting your data", blocks: [
       { type: "paragraph", text: "Settings → Data & deletion lets you download your account's project, script, library, render and AI metadata as a JSON file. Original media and finished videos download separately from the app." },
-      { type: "paragraph", text: "You can delete a single project, or your whole account in Settings → Data & deletion by typing DELETE ACCOUNT. Deletion ends every session, cancels uploads and active renders and ends access to projects, scripts, discussion and private assets at once. Files are then removed from storage after at least 125 seconds, with retries; links already issued may work for up to 120 seconds. Copies you already downloaded stay with you." },
+      { type: "paragraph", text: "You can delete a single project, or your whole account in Settings → Data & deletion, on the web or in the Android app, by typing DELETE ACCOUNT. Deletion ends every session, cancels uploads and active renders and ends access to projects, scripts, discussion and private assets at once. Files are then removed from storage after at least 125 seconds, with retries; links already issued may work for up to 120 seconds. Copies you already downloaded stay with you." },
       { type: "paragraph", text: "Deletion does not rewrite existing backups. They expire within 7 days, and if a backup is restored before then, deletions are applied again first. A deleted-account identifier, minimal deletion records and minimal usage counters remain, so that a restore cannot bring back deleted data and usage caps cannot be reset. They contain no media, transcripts, scripts or discussion." },
     ] },
     { heading: "Security", blocks: [
@@ -86,12 +100,13 @@ export const trickticStudioTermsOfUse: AppDocument = {
   slug: "tricktic-studio",
   appName: "TrickTic Studio",
   title: "TrickTic Studio Terms of Service",
-  lastUpdated: "Last updated: October 8, 2026",
-  description: "Terms for the invitation-only TrickTic Studio hosted pilot.",
-  intro: [{ type: "paragraph", text: "These terms apply to the invitation-only TrickTic Studio hosted service at studio.tricktic.com, operated by TrickTic (Daniel Shedrinsky). Please read them before accepting an invitation or using the service. By using the service, you agree to these terms. If you do not agree, do not use the service." }],
+  lastUpdated: "Last updated: October 30, 2026",
+  description: "Terms for the invitation-only TrickTic Studio hosted pilot and its Android app.",
+  intro: [{ type: "paragraph", text: "These terms apply to the invitation-only TrickTic Studio hosted service at studio.tricktic.com and the TrickTic Studio Android app, operated by TrickTic (Daniel Shedrinsky). Please read them before accepting an invitation or using the service. By using the service, you agree to these terms. If you do not agree, do not use the service." }],
   sections: [
     { heading: "1. The service", blocks: [
       { type: "paragraph", text: "TrickTic Studio turns pre-cut spoken clips into finished downloadable videos, with transcription, captions, scripts, a private asset library and AI features such as the Copilot assistant. Supported formats, upload and storage limits, render queues and Copilot usage caps are shown in the app and may change during the pilot. Studio is not a backup or archive service; keep your own copies of your source files and finished videos." },
+      { type: "paragraph", text: "The Android app opens the same service, under these terms. Google Play's own terms apply to downloading the app from Google Play." },
     ] },
     { heading: "2. Your account", blocks: [
       { type: "paragraph", text: "You must be at least 18 years old and have the legal capacity and any permission needed to use the service. If you act for an organization, you must have authority to do so. Sign in with the Google identity your invitation was sent to, keep your access private, and tell us promptly if you believe your account has been compromised." },
@@ -131,7 +146,7 @@ export const trickticStudioTermsOfUse: AppDocument = {
       { type: "paragraph", text: "Nothing in these terms excludes liability that cannot lawfully be excluded, such as liability for fraud, intentional harm or gross negligence, or for death or personal injury caused by negligence, or takes away mandatory consumer rights or remedies." },
     ] },
     { heading: "10. Leaving the service and deleting your account", blocks: [
-      { type: "paragraph", text: "You can stop using the service at any time and delete your account in Settings → Data & deletion. Export your metadata and download any media or videos you want to keep first. The privacy policy explains which data is removed, which minimal records remain and how existing backups expire. Copies you already downloaded or published are not affected." },
+      { type: "paragraph", text: "You can stop using the service at any time and delete your account in Settings → Data & deletion, on the web or in the Android app. Uninstalling the app does not delete your account. Export your metadata and download any media or videos you want to keep first. The privacy policy explains which data is removed, which minimal records remain and how existing backups expire. Copies you already downloaded or published are not affected." },
     ] },
     { heading: "11. Changes to these terms", blocks: [
       { type: "paragraph", text: "We will identify revisions with an updated date and notify affected users of material changes before they apply where practical and as required by law. Changes do not retrospectively authorize new uses of previously collected information or introduce charges without agreement. If you do not accept a material change, you can stop using the service and delete your account. Mandatory rights continue to apply." },
