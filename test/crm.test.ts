@@ -18,6 +18,9 @@ test("CRM privacy keeps its provider, retention and deletion clauses", () => {
     "only while the channel's free reply time is open, and passes the conversation to you when it cannot answer",
     "It does not see files, notes, payments, contracts, other clients or other businesses",
     "CRM does not use AI to sort or score your leads. The order of the Today list is a fixed rule.",
+    // CRM-281 (owner, 2026-10-31): what the decision-model provider receives.
+    "with phone numbers, email addresses and identifying numbers removed, to a decision-model provider, which returns labels only.",
+    "we send a customer's question that the assistant handed to the business, with the same details removed, and keep only its topic.",
     "with phone numbers, email addresses and ID-like numbers masked",
     "TrickTic has turned off their use for training its models",
     "Deleted when you use them, or after 24 hours.",
@@ -56,7 +59,7 @@ test("CRM privacy keeps its provider, retention and deletion clauses", () => {
   // Providers other than Google and Meta are described by role (owner,
   // 2026-10-07; Meta is the channel itself and cannot be described by role).
   // The AI model and voice-agent providers are described by role too (CRM-112).
-  for (const name of ["HOSTKEY", "Cloudflare", "SMTP2GO", "n8n", "R2", "Amazon", "OpenAI", "Anthropic", "Claude", "Codex", "ChatGPT", "ElevenLabs", "Vapi", "Retell", "Voicy", "Yappr"]) {
+  for (const name of ["HOSTKEY", "Cloudflare", "SMTP2GO", "n8n", "R2", "Amazon", "OpenAI", "Anthropic", "Claude", "Codex", "ChatGPT", "ElevenLabs", "Vapi", "Retell", "Voicy", "Yappr", "TypeSafe", "Jev"]) {
     assert.ok(!visible.includes(name), `names a provider: ${name}`);
   }
 });
