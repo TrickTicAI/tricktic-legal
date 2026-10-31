@@ -17,7 +17,13 @@ test("CRM privacy keeps its provider, retention and deletion clauses", () => {
     "The assistant is an AI feature that TrickTic switches on for a business.",
     "only while the channel's free reply time is open, and passes the conversation to you when it cannot answer",
     "It does not see files, notes, payments, contracts, other clients or other businesses",
-    "CRM does not use AI to sort or score your leads. The order of the Today list is a fixed rule.",
+    "CRM does not use AI to score your leads. The order of the Today list is a fixed rule.",
+    // Decision models (CRM-231 to CRM-234, CRM-256).
+    "a decision model, a kind of AI that chooses among fixed answers and writes no text",
+    "It does not mark, hide, approve, delete or reorder anything by itself.",
+    "or one column heading of a file you import, without its cells",
+    "The provider keeps requests under its own terms and does not use them to train its models",
+    "The text sent to the AI model provider or the decision-model provider is not kept in CRM",
     "with phone numbers, email addresses and ID-like numbers masked",
     "TrickTic has turned off their use for training its models",
     "Deleted when you use them, or after 24 hours.",
@@ -56,7 +62,7 @@ test("CRM privacy keeps its provider, retention and deletion clauses", () => {
   // Providers other than Google and Meta are described by role (owner,
   // 2026-10-07; Meta is the channel itself and cannot be described by role).
   // The AI model and voice-agent providers are described by role too (CRM-112).
-  for (const name of ["HOSTKEY", "Cloudflare", "SMTP2GO", "n8n", "R2", "Amazon", "OpenAI", "Anthropic", "Claude", "Codex", "ChatGPT", "ElevenLabs", "Vapi", "Retell", "Voicy", "Yappr"]) {
+  for (const name of ["HOSTKEY", "Cloudflare", "SMTP2GO", "n8n", "R2", "Amazon", "OpenAI", "Anthropic", "Claude", "Codex", "ChatGPT", "ElevenLabs", "Vapi", "Retell", "Voicy", "Yappr", "TypeSafe", "Jev"]) {
     assert.ok(!visible.includes(name), `names a provider: ${name}`);
   }
 });
