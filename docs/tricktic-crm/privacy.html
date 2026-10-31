@@ -115,8 +115,8 @@
 <body>
 <main class="document">
   <h1 class="title">TrickTic-CRM Privacy Policy</h1>
-  <p class="updated">Effective: October 17, 2026</p>
-  <p class="paragraph">Effective 2026-10-17. Provider: TrickTic, operated by Daniel Shedrinsky. Questions or requests: <a class="link" href="mailto:support@tricktic.com">support@tricktic.com</a>.</p>
+  <p class="updated">Effective: October 31, 2026</p>
+  <p class="paragraph">Effective 2026-10-31. Provider: TrickTic, operated by Daniel Shedrinsky. Questions or requests: <a class="link" href="mailto:support@tricktic.com">support@tricktic.com</a>.</p>
   <p class="paragraph">This policy covers TrickTic-CRM at crm.tricktic.com, a workspace for the leads and conversations that businesses receive from their landing pages, Instagram, WhatsApp, phone calls and booking page. Access is by invitation.</p>
   <p class="paragraph">Some parts of CRM are switched on by TrickTic for each business separately: the assistant, the voice assistant, contracts and quotes, payment records and the booking page. A part that is off for your business collects nothing for it.</p>
   <section>
@@ -124,7 +124,7 @@
     <p class="paragraph">Your business decides which leads to collect and what to do with them. TrickTic runs TrickTic-CRM for you and processes lead data to provide the service.</p>
     <p class="paragraph">Your landing page needs its own privacy notice for visitors. It should say that form submissions go to your business and its service providers.</p>
     <p class="paragraph">If you connect an Instagram or WhatsApp account, the people who write to that account are your customers. Their messages reach CRM because you connected the account, and TrickTic handles them only to show them to you and to send the replies you write. Your own privacy notice should say that messages sent to your business are handled by your service providers.</p>
-    <p class="paragraph">The same applies to the people who call your business when the voice assistant answers, who sign a contract or answer a quote you send, and who book on your booking page: they are your customers, and TrickTic handles their details for your business. If you use the assistant or the voice assistant, your privacy notice should also say that messages and calls may be answered by an automated assistant that uses AI service providers.</p>
+    <p class="paragraph">The same applies to the people who call your business when the voice assistant answers, who sign a contract or answer a quote you send, and who book on your booking page: they are your customers, and TrickTic handles their details for your business. If you use the assistant, the voice assistant or the decision model, your privacy notice should also say that messages and calls may be answered by an automated assistant, and messages sorted by AI, using AI service providers.</p>
     <p class="paragraph">TrickTic does not sell the data in CRM, does not use it for advertising and does not use it for any purpose other than providing the service to your business.</p>
   </section>
   <section>
@@ -216,7 +216,8 @@
     <p class="paragraph">CRM records the amounts and payments you enter. It does not take payments, create payment links, store card details or issue invoices or receipts, and a payment record or quote is not a tax document.</p>
     <p class="paragraph">CRM sends a message to a customer only in these cases: when you write it and press send, one message to one person; when you press send on a contract or quote, one email to one person, and after they answer it, a copy of the signed contract or answered quote to them; when the assistant is on for that channel, as described below; and the confirmation and change emails of a booking, sent to the customer who booked if they gave an email address. It does not send in bulk or on a schedule, and it does not send paid template messages.</p>
     <p class="paragraph">The assistant is an AI feature that TrickTic switches on for a business. It can suggest a reply that you edit and send yourself. If TrickTic also switches on its replies for an Instagram or WhatsApp account, it answers a customer who writes to you, only while the channel's free reply time is open, and passes the conversation to you when it cannot answer. It answers only from your knowledge card and the current conversation. It does not see files, notes, payments, contracts, other clients or other businesses, and it does not write first, book, change records or send anything other than its reply. It stops in a conversation you answer yourself, pause or mark as personal.</p>
-    <p class="paragraph">CRM does not use AI to sort or score your leads. The order of the Today list is a fixed rule.</p>
+    <p class="paragraph">If TrickTic switches it on for your business, a decision model, a kind of AI that chooses among fixed answers and writes no text, sorts some of what reaches CRM: whether a customer's message is a complaint, a change or cancellation, a request to stop, or needs no reply; whether it tries to misuse the assistant; whether the assistant's reply promises something its knowledge does not say; whether a comment or a message matches one of your rules or flows; whether an inquiry looks like spam or a test; whether a review is negative or needs a reply soon; whether a recommendation contains contact details or insults; and which field a column of a file you import belongs to. With that answer CRM passes the conversation to you, pauses the assistant for that person and tells you, keeps the assistant's reply as a draft for you, sends the reply or starts the flow you set up, or shows you a suggestion. It does not mark, hide, approve, delete or reorder anything by itself.</p>
+    <p class="paragraph">CRM does not use AI to score your leads. The order of the Today list is a fixed rule.</p>
     <p class="paragraph">A connected Instagram or WhatsApp account brings every chat on it into CRM, including private chats with friends, family or suppliers. You can mark a conversation as personal. CRM then deletes its stored messages and files and stops keeping later messages from that person, until you undo it.</p>
   </section>
   <section>
@@ -255,6 +256,11 @@
             <td>An AI model provider, chosen by TrickTic</td>
             <td>Writes the assistant's suggested replies and replies</td>
             <td>For each reply: fixed instructions, your business's name and knowledge card, and the recent messages of that one conversation, with phone numbers, email addresses and ID-like numbers masked. Not names or other details from your records, files, other conversations or identifiers. The provider keeps requests under its own terms, and TrickTic has turned off their use for training its models</td>
+          </tr>
+          <tr>
+            <td>A decision-model provider, chosen by TrickTic</td>
+            <td>Sorts messages, comments, inquiries, reviews, recommendations and import columns as described above, for a business where TrickTic switched it on</td>
+            <td>For each question: your business's name and type and one of these: the recent messages of one conversation, with phone numbers, email addresses and ID-like numbers masked; the assistant's reply with the knowledge it was given; a comment, or a message that answers one of your rules or flows, shortened; an inquiry's name, message and questionnaire answers, without its phone or email; a review's or recommendation's words and stars; or one column heading of a file you import, without its cells. The provider keeps requests under its own terms and does not use them to train its models</td>
           </tr>
           <tr>
             <td>A voice-agent provider, chosen by TrickTic</td>
@@ -337,8 +343,8 @@
             <td>Deleted when you use them, or after 24 hours. A reply the assistant sends is kept as a message of that conversation</td>
           </tr>
           <tr>
-            <td>The knowledge card, and the record of each use of the assistant</td>
-            <td>The card until you change it or your account is deleted; the records of use with the lead they concern. The text sent to the AI model provider is not kept in CRM</td>
+            <td>The knowledge card, the record of each use of the assistant, and the decision model's answers</td>
+            <td>The card until you change it or your account is deleted; the records of use and the answers with the lead they concern. The text sent to the AI model provider or the decision-model provider is not kept in CRM</td>
           </tr>
           <tr>
             <td>Calls answered by the voice assistant</td>
