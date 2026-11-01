@@ -36,14 +36,20 @@ import type { AppDocument } from "./types";
 // built is in the CRM repository, docs/ops/privacy.md. Daniel approved the
 // text on 2026-10-17 and asked for it to be published that day; the voice
 // statements are kept by card CRM-133.
+//
+// Decision models in TrickTic's operator area (TrickTic-CRM card CRM-281,
+// docs/ops/privacy.md, "/ops triage"): a decision-model provider, described by
+// role, labels the problem reports owners send TrickTic and the customer
+// questions the assistant handed over, masked, and returns labels only.
+// Daniel approved the text on 2026-10-31.
 export const trickticCrmPrivacyPolicy: AppDocument = {
   slug: "tricktic-crm",
   appName: "TrickTic-CRM",
   title: "TrickTic-CRM Privacy Policy",
-  lastUpdated: "Effective: October 17, 2026",
+  lastUpdated: "Effective: October 31, 2026",
   description: "What TrickTic-CRM stores, including conversations, the assistant, calls, contracts, payment records and bookings, who processes it, how long it is kept and how to export or delete it.",
   intro: [
-    { type: "linked-paragraph", parts: ["Effective 2026-10-17. Provider: TrickTic, operated by Daniel Shedrinsky. Questions or requests: ", { text: "support@tricktic.com", href: "mailto:support@tricktic.com" }, "."] },
+    { type: "linked-paragraph", parts: ["Effective 2026-10-31. Provider: TrickTic, operated by Daniel Shedrinsky. Questions or requests: ", { text: "support@tricktic.com", href: "mailto:support@tricktic.com" }, "."] },
     { type: "paragraph", text: "This policy covers TrickTic-CRM at crm.tricktic.com, a workspace for the leads and conversations that businesses receive from their landing pages, Instagram, WhatsApp, phone calls and booking page. Access is by invitation." },
     { type: "paragraph", text: "Some parts of CRM are switched on by TrickTic for each business separately: the assistant, the voice assistant, contracts and quotes, payment records and the booking page. A part that is off for your business collects nothing for it." },
   ],
@@ -90,6 +96,7 @@ export const trickticCrmPrivacyPolicy: AppDocument = {
         ["Meta (Instagram and WhatsApp)", "Carries messages between your customers and the Instagram or WhatsApp account you connected", "The messages and files you send from CRM and the assistant's replies. Meta delivers your customers' messages to CRM and handles them under its own terms with you and with your customers"],
         ["An AI model provider, chosen by TrickTic", "Writes the assistant's suggested replies and replies", "For each reply: fixed instructions, your business's name and knowledge card, and the recent messages of that one conversation, with phone numbers, email addresses and ID-like numbers masked. Not names or other details from your records, files, other conversations or identifiers. The provider keeps requests under its own terms, and TrickTic has turned off their use for training its models"],
         ["A voice-agent provider, chosen by TrickTic", "Answers the calls your business forwards to it, with a voice assistant that uses speech and AI models, and sends CRM the result", "The calls: the caller's number and voice, and what is said. It records and transcribes each call and sends CRM the number, the transcript, a summary and the details collected. TrickTic sets it to keep recordings and transcripts for no more than 30 days"],
+        ["A decision-model provider, chosen by TrickTic", "Labels text with fixed answers, such as a topic or a yes or no. It writes no text", "The text of a problem report you send TrickTic, or a customer's question that the assistant handed to you, with phone numbers, email addresses and identifying numbers removed. CRM keeps only the labels"],
         ["A file storage provider", "Stores the pictures, voice messages, video and files of your conversations, and the PDFs of signed contracts and answered quotes", "Those files, encrypted by CRM before they are stored. They are never public and are shown only to you, signed in to CRM"],
         ["An email delivery provider", "Sends your new-lead and follow-up emails, the contracts and quotes you send, their PDFs once answered, and booking emails", "Your email address and the notice. So that you can act from the email, a notice includes the lead's name, phone, email, source and message. For contracts, quotes and bookings: the customer's email address, the link and, once answered, the PDF, sent to the customer and to you. Open and click tracking are off"],
         ["The calendar app you add CRM's private subscription link to", "Shows your open follow-ups in your own calendar", "For each follow-up, the kind of step and the client's name, the date or time and the meeting place. Anyone who has the link can read these, so keep it private. You can replace it or turn it off"],
@@ -97,6 +104,7 @@ export const trickticCrmPrivacyPolicy: AppDocument = {
         ["Integration services used to deliver submissions", "Pass form submissions from your landing page to CRM", "The form submission"],
         ["AI tools from external providers", "Used by TrickTic when operating, maintaining, securing or supporting the service", "Lead data only where needed for those purposes, under the provider's confidentiality terms"],
       ] },
+      { type: "paragraph", text: "To sort the problem reports you send us, and to group the same problem reported by several businesses, we send the text of a report, with phone numbers, email addresses and identifying numbers removed, to a decision-model provider, which returns labels only. To show a business which questions its assistant could not answer, we send a customer's question that the assistant handed to the business, with the same details removed, and keep only its topic." },
       { type: "paragraph", text: "Providers may change as the service develops, and they may process data outside your country. A current list is available from support." },
       { type: "paragraph", text: "Server logs keep request status and timing only, not form contents." },
     ] },

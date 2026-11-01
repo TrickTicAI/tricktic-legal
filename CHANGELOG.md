@@ -11,6 +11,16 @@ All notable changes to what legal.tricktic.com serves. The format follows
 - Live on legal.tricktic.com since 2026-10-05. The repository moved to the
   TrickTicAI organization, which has verified tricktic.com for GitHub Pages.
 
+## [1.6.2] - 2026-10-31
+
+### Changed
+
+- TrickTic-CRM privacy policy, effective 2026-10-31 (TrickTic-CRM card
+  CRM-281, Daniel's approval of 2026-10-31): a decision-model provider,
+  described by role, labels the problem reports owners send TrickTic and the
+  customer questions the assistant handed over, with phone numbers, email
+  addresses and identifying numbers removed; CRM keeps only the labels.
+
 ## [1.6.1] - 2026-10-30
 
 ### Changed
