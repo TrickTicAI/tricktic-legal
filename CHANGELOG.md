@@ -20,6 +20,14 @@ All notable changes to what legal.tricktic.com serves. The format follows
   described by role, labels the problem reports owners send TrickTic and the
   customer questions the assistant handed over, with phone numbers, email
   addresses and identifying numbers removed; CRM keeps only the labels.
+- TrickTic-CRM privacy policy covers decision models (TrickTic-CRM cards
+  CRM-231 to CRM-234 and CRM-256): for a business where TrickTic switches it
+  on, a decision-model provider, described by role, sorts messages, comments,
+  inquiries, reviews, recommendations and import column headings, and CRM
+  keeps its answers, not the text. "CRM does not use AI to sort or score your
+  leads" becomes "CRM does not use AI to score your leads"; Today stays a
+  fixed rule. Effective 2026-10-31, with Daniel's approval of the same day.
+  The terms are unchanged.
 
 ## [1.6.1] - 2026-10-30
 
