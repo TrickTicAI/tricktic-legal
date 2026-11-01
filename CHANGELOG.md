@@ -11,6 +11,16 @@ All notable changes to what legal.tricktic.com serves. The format follows
 - Live on legal.tricktic.com since 2026-10-05. The repository moved to the
   TrickTicAI organization, which has verified tricktic.com for GitHub Pages.
 
+## [1.6.3] - 2026-10-31
+
+### Changed
+
+- TrickTic-CRM privacy policy: the decision-model provider also suggests
+  which Instagram or WhatsApp conversations look personal (TrickTic-CRM card
+  CRM-279), from the newest messages of both sides with names, phone numbers,
+  email addresses and ID-like numbers masked. Only the owner's press marks a
+  conversation personal. Effective date unchanged; awaits Daniel's approval.
+
 ## [1.6.2] - 2026-10-31
 
 ### Changed

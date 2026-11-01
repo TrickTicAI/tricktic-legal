@@ -21,7 +21,10 @@ test("CRM privacy keeps its provider, retention and deletion clauses", () => {
     // Decision models (CRM-231 to CRM-234, CRM-256).
     "a decision model, a kind of AI that chooses among fixed answers and writes no text",
     "It does not mark, hide, approve, delete or reorder anything by itself.",
-    "or one column heading of a file you import, without its cells",
+    "one column heading of a file you import, without its cells",
+    // CRM-279: personal-looking conversations, suggested only.
+    "CRM suggests which conversations look personal; only your press marks one.",
+    "only its newest messages from both sides, with names, phone numbers, email addresses and ID-like numbers masked",
     "The provider keeps requests under its own terms and does not use them to train its models",
     "The text sent to the AI model provider or the decision-model provider is not kept in CRM",
     // CRM-281 (owner, 2026-10-31): what the decision-model provider receives.
