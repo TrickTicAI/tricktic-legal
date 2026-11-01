@@ -11,7 +11,22 @@ All notable changes to what legal.tricktic.com serves. The format follows
 - Live on legal.tricktic.com since 2026-10-05. The repository moved to the
   TrickTicAI organization, which has verified tricktic.com for GitHub Pages.
 
-## [1.6.3] - 2026-10-31
+## [1.6.4] - 2026-11-01
+
+### Changed
+
+- TrickTic-CRM privacy policy, effective 2026-11-01 (Daniel's approval of
+  the same day): the decision-model provider also suggests, from one customer
+  message with phone numbers, email addresses and ID-like numbers masked,
+  which of the business's saved services it asks about, whether the customer
+  asked to be contacted later, and whether they say they paid and how
+  (TrickTic-CRM card CRM-280). A service question also sends the saved
+  service names. Each suggestion only fills in a form the owner saves; CRM
+  computes the date and the amount.
+- The decision-model provider has one row in the provider table: the CRM-281
+  row (problem reports and handed-over questions) is folded into it.
+
+## [1.6.3] - 2026-11-01
 
 ### Changed
 
@@ -19,7 +34,7 @@ All notable changes to what legal.tricktic.com serves. The format follows
   which Instagram or WhatsApp conversations look personal (TrickTic-CRM card
   CRM-279), from the newest messages of both sides with names, phone numbers,
   email addresses and ID-like numbers masked. Only the owner's press marks a
-  conversation personal. Effective date unchanged; awaits Daniel's approval.
+  conversation personal. Approved by Daniel on 2026-11-01.
 
 ## [1.6.2] - 2026-10-31
 

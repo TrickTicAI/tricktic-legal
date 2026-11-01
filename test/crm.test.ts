@@ -25,6 +25,12 @@ test("CRM privacy keeps its provider, retention and deletion clauses", () => {
     // CRM-279: personal-looking conversations, suggested only.
     "CRM suggests which conversations look personal; only your press marks one.",
     "only its newest messages from both sides, with names, phone numbers, email addresses and ID-like numbers masked",
+    // CRM-280: a service, a follow-up date and a payment, suggested only.
+    "which of your saved services it asks about, whether the customer asked to be contacted later, and whether the customer says they paid and how",
+    "A suggested service, follow-up date or payment only fills in the form you then save yourself",
+    "one customer message, with phone numbers, email addresses and ID-like numbers masked, and for a service question the names of your saved services",
+    // CRM-281: problem reports, in the same single provider row.
+    "or the text of a problem report you send TrickTic",
     "The provider keeps requests under its own terms and does not use them to train its models",
     "The text sent to the AI model provider or the decision-model provider is not kept in CRM",
     // CRM-281 (owner, 2026-10-31): what the decision-model provider receives.
