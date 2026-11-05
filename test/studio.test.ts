@@ -28,10 +28,29 @@ test("Studio privacy keeps its provider, retention and deletion clauses", () => 
     "An invitation that is never used is deleted 30 days after it expires or is revoked.",
   ]) assert.ok(visible.includes(clause), clause);
   assert.ok(links(html).some((link) => link.href === "mailto:contact@tricktic.com"));
-  // Providers are described by role so infrastructure can change (owner, 2026-10-07).
+  // Providers are described by role so infrastructure can change (owner, 2026-10-07);
+  // TypeSafe's Jev is named at the owner's request (2026-11-05).
   for (const name of ["HOSTKEY", "Cloudflare", "OpenAI", "France", "R2", "SMTP2GO"]) {
     assert.ok(!visible.includes(name), `names a provider or location: ${name}`);
   }
+});
+
+test("Studio privacy names TypeSafe's Jev and what it receives (TTS-334)", () => {
+  const visible = mainText(readBuilt("tricktic-studio/privacy.html"));
+  for (const clause of [
+    "Effective 2026-11-05.",
+    "TypeSafe's Jev, a decision model that chooses among fixed answers and writes no text",
+    "Studio pays for it with the owner's TypeSafe account; you never provide a key.",
+    "one caption line with the line before and after it",
+    "the transcript of a stream or long recording a minute at a time",
+    "two neighbouring spoken lines of a clip, for auto clean-up",
+    "the text of one viewer comment, when Jev is on for comments",
+    "only for the Studio owner's own accounts unless the owner allows them for everyone",
+    "It never receives your account, your name or your project.",
+    "Studio keeps only the answers' labels and confidences, the time taken, the tokens used and the cost, never the text or pictures sent",
+    "they are deleted with your project or account and included in your export",
+    "How long TypeSafe keeps a request is TypeSafe's policy.",
+  ]) assert.ok(visible.includes(clause), clause);
 });
 
 test("Studio privacy covers the Android app as built (TTS-250)", () => {
