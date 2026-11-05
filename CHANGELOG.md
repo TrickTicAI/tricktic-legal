@@ -11,6 +11,20 @@ All notable changes to what legal.tricktic.com serves. The format follows
 - Live on legal.tricktic.com since 2026-10-05. The repository moved to the
   TrickTicAI organization, which has verified tricktic.com for GitHub Pages.
 
+## [1.6.5] - 2026-11-05
+
+### Changed
+
+- TrickTic Studio privacy policy, effective 2026-11-05 (Daniel's request of
+  the same day): names TypeSafe's Jev decision model as a service provider
+  Studio pays for with the owner's account, what each use sends (caption
+  lines with their neighbours, stream transcript a minute at a time,
+  neighbouring spoken lines, one viewer comment, and preview frames only for
+  the owner's own accounts unless extended), that no account, name or
+  project is sent, and that Studio keeps only labels, confidences, time,
+  tokens and cost, deleted with the project or account and in the export
+  (Studio card TTS-334).
+
 ## [1.6.4] - 2026-11-01
 
 ### Changed

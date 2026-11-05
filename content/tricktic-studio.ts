@@ -8,14 +8,17 @@ import type { AppDocument } from "./types";
 // and the operator's overview added at Daniel's request on 2026-10-08 (Studio TTS-47).
 // The Android app (Studio TTS-250) and the account avatar (TTS-50, the wording of
 // tricktic-legal PR #7) added at Daniel's request on 2026-10-30, for the Play listing.
+// TypeSafe's Jev decision model (Studio TTS-334, docs/decisions/tts-334-jev-decisions.md
+// and docs/browser/guide/privacy-and-retention.md) is named, at Daniel's request on
+// 2026-11-05: the one provider named besides Google.
 export const trickticStudioPrivacyPolicy: AppDocument = {
   slug: "tricktic-studio",
   appName: "TrickTic Studio",
   title: "TrickTic Studio Privacy Policy",
-  lastUpdated: "Effective: October 30, 2026",
+  lastUpdated: "Effective: November 5, 2026",
   description: "Privacy policy for the invitation-only hosted TrickTic Studio service and its Android app.",
   intro: [
-    { type: "linked-paragraph", parts: ["Effective 2026-10-30. Published and operated by TrickTic (Daniel Shedrinsky). For privacy questions, contact ", { text: "contact@tricktic.com", href: "mailto:contact@tricktic.com" }, "."] },
+    { type: "linked-paragraph", parts: ["Effective 2026-11-05. Published and operated by TrickTic (Daniel Shedrinsky). For privacy questions, contact ", { text: "contact@tricktic.com", href: "mailto:contact@tricktic.com" }, "."] },
     { type: "paragraph", text: "This policy covers the invitation-only hosted TrickTic Studio service at studio.tricktic.com and the TrickTic Studio Android app, which opens the same service. Studio turns pre-cut spoken clips into finished downloadable videos." },
   ],
   sections: [
@@ -53,6 +56,7 @@ export const trickticStudioPrivacyPolicy: AppDocument = {
         "Google's push-notification service (Firebase Cloud Messaging) delivers notifications to the Android app. It receives the phone's push-notification token and the notification described above.",
         "Transcription of your audio and video may run on hardware we operate or with a speech-recognition provider.",
         "AI model providers power Copilot and other AI features. A request sends the project information needed for it, such as the script, transcript or captions, recent discussion and only the library descriptions you choose to share. It does not send your account credentials. We configure these providers not to use your content to train their models.",
+        "TypeSafe's Jev, a decision model that chooses among fixed answers and writes no text, answers short typed questions about an edit, for each use the Studio owner turns on. Studio pays for it with the owner's TypeSafe account; you never provide a key. For each use it receives only what the question needs: one caption line with the line before and after it; the transcript of a stream or long recording a minute at a time, to score each minute as a possible short; two neighbouring spoken lines of a clip, for auto clean-up; the text of one viewer comment, when Jev is on for comments; and frames of B-roll and of a quick preview while a video renders, only for the Studio owner's own accounts unless the owner allows them for everyone. It never receives your account, your name or your project. Studio keeps only the answers' labels and confidences, the time taken, the tokens used and the cost, never the text or pictures sent; they are deleted with your project or account and included in your export. How long TypeSafe keeps a request is TypeSafe's policy.",
         "Error-monitoring and operational services help us detect and fix problems, using the technical information described above.",
         "An email delivery provider sends invitation and reminder emails. It receives your email address and the message.",
       ] },
