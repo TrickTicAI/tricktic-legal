@@ -11,6 +11,24 @@ All notable changes to what legal.tricktic.com serves. The format follows
 - Live on legal.tricktic.com since 2026-10-05. The repository moved to the
   TrickTicAI organization, which has verified tricktic.com for GitHub Pages.
 
+## [1.6.7] - 2026-11-17
+
+### Changed
+
+- TrickTic-CRM privacy policy and pilot terms (draft for Daniel's review,
+  TrickTic-CRM card CRM-525): automatic follow-ups. Where TrickTic switches
+  them on and the business turns them on, CRM sends a customer who stopped
+  answering up to three follow-ups:
+  - each is written by the AI model for that customer and chosen by the
+    decision model, and shown to the owner about 30 minutes ahead;
+  - after WhatsApp's 24 hours, only a template Meta approved can go;
+  - any answer stops them.
+
+  Also covered: what the AI model and decision-model providers receive for a
+  follow-up, what is stored and for how long, export and deletion, and the
+  customer's side. "Does not send on a schedule" and "no paid template
+  messages" now except automatic follow-ups.
+
 ## [1.6.6] - 2026-11-10
 
 ### Changed
