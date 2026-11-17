@@ -15,8 +15,8 @@ All notable changes to what legal.tricktic.com serves. The format follows
 
 ### Changed
 
-- TrickTic-CRM privacy policy and pilot terms (draft for Daniel's review,
-  TrickTic-CRM card CRM-525): automatic follow-ups. Where TrickTic switches
+- TrickTic-CRM privacy policy and pilot terms (Daniel had it published on
+  2026-11-17, TrickTic-CRM card CRM-525): automatic follow-ups. Where TrickTic switches
   them on and the business turns them on, CRM sends a customer who stopped
   answering up to three follow-ups:
   - each is written by the AI model for that customer and chosen by the

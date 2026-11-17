@@ -79,7 +79,7 @@ import type { AppDocument } from "./types";
 // follow-ups, each written by the AI model for that customer and chosen by
 // the decision model, and after WhatsApp's 24 hours an approved template.
 // This replaces "does not send on a schedule" and "no paid template
-// messages". Drafted 2026-11-17 for Daniel's review; not yet approved.
+// messages". Daniel had it merged and published on 2026-11-17.
 export const trickticCrmPrivacyPolicy: AppDocument = {
   slug: "tricktic-crm",
   appName: "TrickTic-CRM",
